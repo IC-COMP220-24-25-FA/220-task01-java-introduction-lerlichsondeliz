@@ -9,21 +9,40 @@ public class FunctionPractice {
      * @throws IllegalArgumentException if any of the numbers is negative
      */
     public static int largestOfThree(int first, int second, int third){
-        throw new RuntimeException("Not Implemented");
+        if (first < 0 || second < 0 || third<0){
+            throw new IllegalArgumentException("Numbers are not allowed to be negative");
+        }
+
+        if (first >= second && first >= third)
+            return first;
+        
+        else if (second >= first && second >= third)
+            return second;
+        else 
+            return third;
+        
+        
     }
-    
     /**
      * @return the final price at register of the given item after discount and tax applied
      */
+    // assuming 17% would be entered as 17
     public static double calcSalePrice(double originalPrice, double discountPercent, double salesTax){
-        throw new RuntimeException("Not Implemented");
+        // double price = originalPrice * (1 - discountPercent * 0.01) * (1 + salesTax * 0.01);
+        // return Math.round(price * 100) / 100; 
+        double discountDecimal = 1 - (discountPercent / 100);
+        double salesTaxDecimal = (salesTax / 100) + 1 ;
+        double finalUnrounded = originalPrice  * discountDecimal * salesTaxDecimal;
+        double finalNumber = Math.round(finalUnrounded * 100.0) / 100.0;
+        return finalNumber;
     }
 
     /**
      * @return true if the data collected shows the dog is good, false if bad dog today
      */
     public static boolean isGoodDog(int yearsOld, int daysSinceShoesChewed, boolean fetchedThePaperToday){
-        throw new RuntimeException("Not Implemented");
+        return true;
+        // all dogs are good dogs
     }
 
     /**
