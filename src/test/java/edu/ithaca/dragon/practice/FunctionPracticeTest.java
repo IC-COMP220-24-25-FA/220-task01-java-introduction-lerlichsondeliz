@@ -48,7 +48,7 @@ public class FunctionPracticeTest {
             assertEquals(8, FunctionPractice.findFirstLargest(List.of(1,1,1,1,2,2,2,2,3)));
             assertEquals(0, FunctionPractice.findFirstLargest(List.of(1,1,1,1)));
             assertEquals(0, FunctionPractice.findFirstLargest(List.of(1)));
-            assertEquals(2, FunctionPractice.findFirstLargest(List.of(1,2,7,4,9)));
+            assertEquals(4, FunctionPractice.findFirstLargest(List.of(1,2,7,4,9)));
             assertEquals(4, FunctionPractice.findFirstLargest(List.of(-1,-2,-3,-4,5)));
     }
 }
