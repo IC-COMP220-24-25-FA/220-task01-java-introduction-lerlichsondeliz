@@ -60,4 +60,13 @@ public class FunctionPracticeTest {
         assertEquals(8, FunctionPractice.findLastLargest(List.of(2, 1, 3, 4, 5, 4, 5, 4, 5, 4, 4, 4)));
         assertEquals(1, FunctionPractice.findLastLargest(List.of(-1, -1, -2, -3)));
     }
+
+    @Test
+    public void findFirstMostOccurencesOfLetterTest(){
+        assertEquals("fennec", FunctionPractice.findFirstMostOccurencesOfLetter(List.of("octane","merc", "dominus", "cyclone", "fennec", "scarab", "ripper"), 'n'));
+        assertEquals("octane", FunctionPractice.findFirstMostOccurencesOfLetter(List.of("octane","merc", "dominus", "cyclone", "fennec", "scarab", "ripper"), 'o'));
+        assertEquals("scarab", FunctionPractice.findFirstMostOccurencesOfLetter(List.of("octane","merc", "dominus", "cyclone", "fennec", "scarab", "ripper"), 'a'));
+        assertEquals("cyclone", FunctionPractice.findFirstMostOccurencesOfLetter(List.of("octane","merc", "dominus", "cyclone", "fennec", "scarab", "ripper"), 'c'));
+
+    }
 }
