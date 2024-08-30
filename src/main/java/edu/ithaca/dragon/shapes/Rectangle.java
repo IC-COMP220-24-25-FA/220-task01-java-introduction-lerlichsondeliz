@@ -22,7 +22,7 @@ public class Rectangle {
     }
 
     public double longestLineWithin(){
-        throw new RuntimeException("Not implemented yet");
+        return Math.sqrt(length*length + width*width);
     }
     
 }
