@@ -19,9 +19,10 @@ public class Circle {
 
     /**
      * @post doubles the size of this circle
+     * assuming this means doubling the radius not the area
      */
     public void doubleSize(){
-        throw new RuntimeException("Not implemented yet");
+        radius *= 2;
     }
 
     /**
