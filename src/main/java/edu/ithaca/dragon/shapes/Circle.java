@@ -16,6 +16,7 @@ public class Circle implements Shape{
     /**
      * @return the area of this circle
      */
+    @Override
     public double calcArea(){
         return Math.PI * radius *radius;
     }
@@ -24,6 +25,7 @@ public class Circle implements Shape{
      * @post doubles the size of this circle
      * assuming this means doubling the radius not the area
      */
+    @Override
     public void doubleSize(){
         radius *= 2;
     }
@@ -31,7 +33,12 @@ public class Circle implements Shape{
     /**
      * @return the longest straight line that can be drawn within this circle
      */
+    @Override
     public double longestLineWithin(){
         return radius * 2;
+    }
+    @Override
+    public String toString() {
+        return "Circle with radius: " + radius;
     }
 }
