@@ -29,17 +29,17 @@ public class FunctionPractice {
      * @return the final price at register of the given item after discount and tax applied
      */
     // assuming 17% would be entered as 17
-    public static BigDecimal calcSalePrice(double originalPrice, double discountPercent, double salesTax){
-        // double price = originalPrice * (1 - discountPercent * 0.01) * (1 + salesTax * 0.01);
-        // return Math.round(price * 100) / 100; 
+    public static double calcSalePrice(double originalPrice, double discountPercent, double salesTax){
+        double price = originalPrice * (1 - discountPercent * 0.01) * (1 + salesTax * 0.01);
+        return Math.round(price * 100) / 100; 
         
-        BigDecimal originalPriceBig = new BigDecimal(originalPrice);
-        BigDecimal discountDecimal = new BigDecimal(1 - (discountPercent / 100));
-        BigDecimal salesTaxDecimal = new BigDecimal((salesTax / 100) + 1 );
-        BigDecimal discountedPrice = (discountDecimal.multiply(originalPriceBig));
-        BigDecimal finalUnrounded = discountedPrice.multiply(salesTaxDecimal);
-        BigDecimal finalNumber = finalUnrounded.setScale(2, RoundingMode.HALF_UP);
-        return finalNumber;
+        // BigDecimal originalPriceBig = new BigDecimal(originalPrice);
+        // BigDecimal discountDecimal = new BigDecimal(1 - (discountPercent / 100));
+        // BigDecimal salesTaxDecimal = new BigDecimal((salesTax / 100) + 1 );
+        // BigDecimal discountedPrice = (discountDecimal.multiply(originalPriceBig));
+        // BigDecimal finalUnrounded = discountedPrice.multiply(salesTaxDecimal);
+        // BigDecimal finalNumber = finalUnrounded.setScale(2, RoundingMode.HALF_UP);
+        // return finalNumber;
     }
 
     /**

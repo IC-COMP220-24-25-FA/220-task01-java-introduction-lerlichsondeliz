@@ -14,5 +14,16 @@ public class TriangleTest {
         Triangle myTriangle = new Triangle(3,4,5);
         assertEquals(6, myTriangle.calcArea(), 0.001);
     }
+
+    @Test
+    public void doubleSizeTest(){
+        Triangle myTriangle = new Triangle(3, 4, 5);
+        myTriangle.doubleSize();
+        assertEquals(24, myTriangle.calcArea(), 0.001);
+    }
     
+    @Test void longestLineWithinTest(){
+        Triangle myTriangle = new Triangle(3, 4, 5);
+        assertEquals(4.272, myTriangle.longestLineWithin(), 0.001);
+    }
 }
