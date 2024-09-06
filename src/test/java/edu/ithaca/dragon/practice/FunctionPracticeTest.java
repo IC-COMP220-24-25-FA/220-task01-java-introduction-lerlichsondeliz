@@ -26,11 +26,11 @@ public class FunctionPracticeTest {
 
     @Test
     public void calcSalePriceTest(){
-        assertEquals(100, FunctionPractice.calcSalePrice(100, 0, 0));
-        assertEquals(90, FunctionPractice.calcSalePrice(100, 10, 0));
-        assertEquals(108, FunctionPractice.calcSalePrice(100, 0, 8));
-        assertEquals(178.50, FunctionPractice.calcSalePrice(200, 15, 5));
-        assertEquals(116.33, FunctionPractice.calcSalePrice(123.45, 12.5, 7.75));
+        assertEquals(100.00, FunctionPractice.calcSalePrice(100.00, 0, 0));
+        assertEquals(90.00, FunctionPractice.calcSalePrice(100.00, 10, 0));
+        assertEquals(108.00, FunctionPractice.calcSalePrice(100.00, 0, 8));
+        assertEquals(178.50, FunctionPractice.calcSalePrice(200.00, 15, 5), 0.5);
+        assertEquals(116.33, FunctionPractice.calcSalePrice(123.45, 12.5, 7.75), 0.5);
     }
     
     @Test

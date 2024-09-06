@@ -1,6 +1,8 @@
 package edu.ithaca.dragon.practice;
 
 import java.util.List;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 public class FunctionPractice {
 
@@ -28,13 +30,16 @@ public class FunctionPractice {
      */
     // assuming 17% would be entered as 17
     public static double calcSalePrice(double originalPrice, double discountPercent, double salesTax){
-        // double price = originalPrice * (1 - discountPercent * 0.01) * (1 + salesTax * 0.01);
-        // return Math.round(price * 100) / 100; 
-        double discountDecimal = 1 - (discountPercent / 100);
-        double salesTaxDecimal = (salesTax / 100) + 1 ;
-        double finalUnrounded = originalPrice  * discountDecimal * salesTaxDecimal;
-        double finalNumber = Math.round(finalUnrounded * 100.0) / 100.0;
-        return finalNumber;
+        double price = originalPrice * (1 - discountPercent * 0.01) * (1 + salesTax * 0.01);
+        return Math.round(price * 100) / 100; 
+        
+        // BigDecimal originalPriceBig = new BigDecimal(originalPrice);
+        // BigDecimal discountDecimal = new BigDecimal(1 - (discountPercent / 100));
+        // BigDecimal salesTaxDecimal = new BigDecimal((salesTax / 100) + 1 );
+        // BigDecimal discountedPrice = (discountDecimal.multiply(originalPriceBig));
+        // BigDecimal finalUnrounded = discountedPrice.multiply(salesTaxDecimal);
+        // BigDecimal finalNumber = finalUnrounded.setScale(2, RoundingMode.HALF_UP);
+        // return finalNumber;
     }
 
     /**
